@@ -1,5 +1,6 @@
 import React from "react";
 import { Vortex } from "../ui/vortex";
+import {ChatbotInterface} from "./chatbotInterface"
 
 export function HeroSection() {
   return (
@@ -22,6 +23,7 @@ export function HeroSection() {
           <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset] montserrat-font-medium text-lg">Get Started</button>
         </div>
       </Vortex>
+      <ChatbotInterface />
     </div>
   );
 }
