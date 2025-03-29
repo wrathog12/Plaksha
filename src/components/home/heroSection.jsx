@@ -1,29 +1,21 @@
+"use client";
 import React from "react";
-import { Vortex } from "../ui/vortex";
-import {ChatbotInterface} from "./chatbotInterface"
+import { Spotlight } from "../ui/spotLight";
+import { ChatbotInterface } from "./chatbotInterface"
 
 export function HeroSection() {
   return (
-    <div className="w-full mx-auto h-screen overflow-hidden">
-      <Vortex
-        backgroundColor="black"
-        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
-      >
-        <h2 className="text-white text-5xl md:text-8xl text-center clash-font-medium">
-          Say Goodbye to Accountants
-        </h2>
-        <p className="text-white text-base md:text-3xl max-w-3xl mt-6 text-center mb-8 montserrat-font-medium ">
-          Eliminate the need for traditional accountants. Our AI handles your
-          financial year tax-saving strategies—smarter, faster, and cheaper.
+    <div className="h-screen w-full flex md:items-center md:justify-center bg-black antialiased bg-grid-white/[0.02] relative overflow-hidden montserrat-font-medium">
+      <Spotlight />
+      <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
+        <h1 className="text-8xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          AI-powered automation <br /> to replace accountants.
+        </h1>
+        <p className="mt-8 font-normal text-neutral-300 max-w-lg text-center mx-auto text-2xl">
+          We're building a fully automated AI solution that eliminates the need for manual accounting — faster, smarter, and cost-effective.
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset] montserrat-font-medium text-lg">
-            Use For Free
-          </button>
-          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset] montserrat-font-medium text-lg">Get Started</button>
-        </div>
-      </Vortex>
-      <ChatbotInterface />
+      </div>
+      <ChatbotInterface></ChatbotInterface>
     </div>
   );
 }
