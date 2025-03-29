@@ -5,7 +5,8 @@ import {
   zodiakVariable,
   zodiakVariableItalic,
   montserratVariable,
-} from './fonts/font';
+} from "./fonts/font";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,6 +20,17 @@ export default function RootLayout({ children }) {
         className={`${clashDisplay.variable} ${zodiakVariable.variable} ${zodiakVariableItalic.variable} ${montserratVariable.variable}`}
       >
         {children}
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              borderRadius: "8px",
+              background: "#333",
+              color: "#fff",
+            },
+          }}
+        />
       </body>
     </html>
   );

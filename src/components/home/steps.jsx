@@ -43,7 +43,7 @@ const timelineData = [
 
 const Steps = () => {
   return (
-    <div className="w-full bg-black">
+    <div className="w-full bg-black pb-32" id="steps" >
       <div className="relative max-w-5xl mx-auto px-10 py-32">
         {/* Center Line */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500 z-0" />
@@ -61,9 +61,9 @@ const Steps = () => {
                 {isLeft ? (
                   <>
                     <div className="w-5/12 text-right pr-4 text-white">
-                      <p className="text-sm ">{item.time}</p>
-                      <h3 className="text-2xl font-semibold">{item.title}</h3>
-                      <p className="">{item.description}</p>
+                      <p className="text-lg montserrat-font-medium text-blue-500 ">{item.time}</p>
+                      <h3 className="text-2xl font-semibold montserrat-font-medium">{item.title}</h3>
+                      <p className="montserrat-font-medium">{item.description}</p>
                     </div>
                     {/* Center dot */}
                     <div className="relative w-12 h-12 flex items-center justify-center rounded-full z-20 bg-blue-500 ">
@@ -91,9 +91,9 @@ const Steps = () => {
                       </div>
                     </div>
                     <div className="w-5/12 pl-4 text-left text-white">
-                      <p className="text-sm ">{item.time}</p>
-                      <h3 className="text-2xl font-semibold">{item.title}</h3>
-                      <p className="">{item.description}</p>
+                      <p className="text-lg montserrat-font-medium text-blue-500">{item.time}</p>
+                      <h3 className="text-2xl font-semibold montserrat-font-medium">{item.title}</h3>
+                      <p className="montserrat-font-medium">{item.description}</p>
                     </div>
                   </>
                 )}
