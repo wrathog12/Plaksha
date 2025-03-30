@@ -43,14 +43,17 @@ export const AccountingFileUpload = ({
   const handleFileChange = (newFiles) => {
     if (newFiles.length > 0) {
       const newFile = newFiles[0];
-      if (newFile.type === "application/pdf" || newFile.type === "text/plain") {
+      if (
+        newFile.type === "image/jpeg" ||
+        newFile.type === "image/png"
+      ) {
         setFile(newFile);
         setError(null);
         if (onChange) {
           onChange([newFile]);
         }
       } else {
-        setError("Only PDF and TXT files are supported");
+        setError("Only Image files are supported");
       }
     }
   };
@@ -170,8 +173,8 @@ export const AccountingFileUpload = ({
     noClick: true,
     onDrop: handleFileChange,
     accept: {
-      'application/pdf': ['.pdf'],
-      'text/plain': ['.txt']
+      'image/jpeg': ['.jpg', '.jpeg'],
+      'image/png': ['.png']
     },
     onDropRejected: (rejectedFiles) => {
       console.log(rejectedFiles);
@@ -265,14 +268,14 @@ export const AccountingFileUpload = ({
             ref={fileInputRef}
             id="file-upload-handle"
             type="file"
-            accept=".pdf,.txt"
+            accept=".jpg,.jpeg,.png"
             onChange={(e) => handleFileChange(Array.from(e.target.files || []))}
             className="hidden"
           />
           
           <div className="pb-8">
             <p className="relative z-20 font-sans font-normal text-neutral-500 mt-2 montserrat-font-medium">
-              Drag or drop your PDF or TXT file here or click to upload (one document only)
+              Drag or drop your Image file here or click to upload (one document only)
             </p>
             <div className="relative w-full mt-6 max-w-xl mx-auto ">
               {file ? (
@@ -405,7 +408,7 @@ export const AccountingFileUpload = ({
                     )}
                   </motion.div>
 
-                  <p className="text-sm text-gray-500 mt-4 montserrat-font-medium">Supported formats: PDF, TXT</p>
+                  <p className="text-sm text-gray-500 mt-4 montserrat-font-medium">Supported formats: JPG, PNG</p>
                 </div>
               )}
 
