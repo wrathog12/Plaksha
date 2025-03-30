@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import LoginForm from "../../components/Authform/loginForm";
 import RegisterForm from "../../components/Authform/registerForm";
-import AuthImage from "../../../public/auth/auth.svg";
+import Login from "../../../public/auth/Login.svg";
 import { useRouter } from "next/navigation";
 import { IconArrowLeft } from "@tabler/icons-react";
 
@@ -43,13 +43,13 @@ const AuthContent = () => {
       {/* Form Side */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-4">
-          <div className="text-center mb-6">
+          <div className="text-start mb-6">
             <motion.h1
               key={isLogin ? "login-title" : "register-title"}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="flex font-semibold items-center justify-start gap-4 text-5xl text-[#4E7BFF]"
+              className="flex font-semibold items-center justify-start gap-4 text-4xl text-[#4E7BFF] montserrat-font-semibold "
             >
               {isLogin ? "Welcome Back" : "Create an Account"}
             </motion.h1>
@@ -76,7 +76,7 @@ const AuthContent = () => {
       {/* Right Side Image */}
       <div className="hidden md:flex w-1/2 bg-white items-center justify-center">
         <Image
-          src={AuthImage}
+          src={Login}
           alt="Authentication Illustration"
           width={2000}
           height={2000}

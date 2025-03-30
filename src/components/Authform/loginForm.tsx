@@ -78,7 +78,7 @@ const LoginForm = ({ toggleForm }: LoginFormProps) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-[#6E7C94]/20 focus:border-[#4E7BFF] focus:outline-none font-bold text-[#121C42] placeholder-[#6E7C94]"
+            className="w-full px-4 py-3 rounded-2xl bg-gray-100 border border-[#6E7C94]/20 focus:border-[#4E7BFF] focus:outline-none font-bold text-[#121C42] placeholder-[#6E7C94]"
           />
           {formErrors.email && (
             <p className="text-red-600 text-sm">{formErrors.email}</p>
@@ -97,7 +97,7 @@ const LoginForm = ({ toggleForm }: LoginFormProps) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-[#6E7C94]/20 focus:border-[#4E7BFF] focus:outline-none font-bold text-[#121C42] placeholder-[#6E7C94]"
+            className="w-full px-4 py-3 rounded-2xl bg-gray-100 border border-[#6E7C94]/20 focus:border-[#4E7BFF] focus:outline-none font-bold text-[#121C42] placeholder-[#6E7C94]"
           />
           <button
             type="button"
@@ -114,7 +114,7 @@ const LoginForm = ({ toggleForm }: LoginFormProps) => {
         <motion.button
           type="submit"
           disabled={loading}
-          className="w-full py-3 rounded-md bg-[#4E7BFF] hover:bg-[#4E7BFF]/90 text-white font-bold transition-all duration-200 focus:ring-2 focus:ring-[#121C42] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 bg-[#4E7BFF] hover:bg-[#4E7BFF]/90 text-white font-bold transition-all duration-200 focus:ring-2 focus:ring-[#121C42] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed rounded-2xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -147,7 +147,8 @@ const LoginForm = ({ toggleForm }: LoginFormProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <button className="inline-flex w-full justify-center rounded-md bg-gray-100 border border-[#6E7C94]/20 p-3 text-[#4E7BFF] hover:bg-[#4E7BFF]/10">
+          <button className="inline-flex w-full justify-center rounded-2xl bg-gray-100 border border-[#6E7C94]/20 p-3 text-[#4E7BFF] hover:bg-[#4E7BFF]/10">
+            
             <FaGoogle size={20} />
           </button>
         </motion.div>
@@ -155,7 +156,7 @@ const LoginForm = ({ toggleForm }: LoginFormProps) => {
         <motion.button
           type="button"
           onClick={toggleForm}
-          className="w-full py-3 rounded-md bg-[#121C42] text-white hover:bg-[#121C42]/90 font-semibold transition-all duration-200 focus:ring-2 focus:ring-[#4E7BFF] focus:ring-offset-2"
+          className="w-full py-3 bg-[#121C42] text-white hover:bg-[#121C42]/90 font-semibold transition-all duration-200 focus:ring-2 focus:ring-[#4E7BFF] focus:ring-offset-2 rounded-2xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}

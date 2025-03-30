@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto ml-4 ">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
-            <Link href="/" className="montserrat-font-medium text-2xl text-white">
+            <Link href="/" className="montserrat-font-medium text-3xl text-white">
               Logo
             </Link>
             <div className="hidden md:flex items-center space-x-12 text-lg montserrat-font-medium">
