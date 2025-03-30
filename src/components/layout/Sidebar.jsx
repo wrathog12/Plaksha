@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sideBarComponent";
-import { Mail, Mails, CircleUser, LogOut, Download } from "lucide-react";
-import { MdOutlineIntegrationInstructions, MdCreditScore } from "react-icons/md";
-import { AiOutlineApi } from "react-icons/ai";
+import { CircleUser, LogOut, LayoutDashboard , UploadCloud  } from "lucide-react";
+import { MdCreditScore } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 import axios from "axios";
 import Image from "next/image";
@@ -46,8 +45,8 @@ const SidebarComponent = () => {
   );
 
   const links = [
-    { label: "dashboard", href: "/dashboard", icon: <Mails className="h-6 w-6 flex-shrink-0" />, isBottom: false },
-    { label: "Upload", href: "/upload", icon: <Mail className="h-6 w-6 flex-shrink-0" />, isBottom: false },
+    { label: "dashboard", href: "/dashboard", icon: <LayoutDashboard className="h-6 w-6 flex-shrink-0" />, isBottom: false },
+    { label: "Upload", href: "/upload", icon: <UploadCloud className="h-6 w-6 flex-shrink-0" />, isBottom: false },
     { label: "Buy-Credit", href: "/buy-credit", icon: <MdCreditScore className="h-6 w-6 flex-shrink-0" />, isBottom: false },
     { label: user?.firstName || "Profile", href: "/profile", icon: <CircleUser className="h-6 w-6 flex-shrink-0" />, isBottom: true },
     { label: "Logout", href: "", icon: <LogOut className="h-6 w-6 flex-shrink-0" />, isBottom: true, onClick: handleLogout },
