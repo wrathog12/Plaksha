@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/hooks/useOutsideClick.js", "src/components/ui/sideBarComponent.jsx", "src/hooks/useSidebar.js", "src/components/layout/Sidebar.jsx"  ],
   "exclude": [
     "node_modules"
   ]

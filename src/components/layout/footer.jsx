@@ -11,7 +11,7 @@ const Footer = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 text-gray-800 hover:text-gray-500"
+            className="inline-block mt-3 text-gray-900"
             aria-label="LinkedIn"
           >
             <FaLinkedin size={24} />
@@ -25,17 +25,17 @@ const Footer = () => {
             <h3 className=" mb-2 text-gray-900">Legal</h3>
             <ul className="text-gray-800 space-y-1">
               <li>
-                <a href="/terms" className="hover:text-gray-500">
+                <a href="/terms" className="">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="/privacy" className="hover:text-gray-500">
+                <a href="/privacy" className="">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/refund" className="hover:text-gray-500">
+                <a href="/refund" className="">
                   Refund Policy
                 </a>
               </li>
@@ -47,12 +47,12 @@ const Footer = () => {
             <h3 className="font-medium mb-2 text-gray-900">Product</h3>
             <ul className="text-gray-800 space-y-1">
               <li>
-                <a href="/features" className="hover:text-gray-500">
+                <a href="/features" className="">
                   Features
                 </a>
               </li>
               <li>
-                <a href="/pricing" className="hover:text-gray-500">
+                <a href="/pricing" className="">
                   Pricing
                 </a>
               </li>
@@ -64,12 +64,12 @@ const Footer = () => {
             <h3 className="font-medium mb-2 text-gray-900">Support</h3>
             <ul className="text-gray-800 space-y-1">
               <li>
-                <a href="/help" className="hover:text-gray-500">
+                <a href="/help" className="">
                   Help Center
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-gray-500">
+                <a href="/contact" className="">
                   Contact Us
                 </a>
               </li>

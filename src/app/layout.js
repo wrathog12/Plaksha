@@ -7,6 +7,7 @@ import {
   montserratVariable,
 } from "./fonts/font";
 import { Toaster } from "react-hot-toast";
+import ReduxProvider from "../redux/provider";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${clashDisplay.variable} ${zodiakVariable.variable} ${zodiakVariableItalic.variable} ${montserratVariable.variable}`}
       >
-        {children}
+        <ReduxProvider>
+            {" "}
+            {children}
+        </ReduxProvider>
         <Toaster
           position="top-center"
           toastOptions={{
