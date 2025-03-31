@@ -6,7 +6,7 @@ export async function POST(request) {
     const userData = await request.json();
     
     // Replace with your actual Flask backend URL
-    const flaskBackendUrl = "http://localhost:5000/generate-report";
+    const flaskBackendUrl = "http://localhost:7000/generate-report";
     
     const response = await fetch(flaskBackendUrl, {
       method: 'POST',

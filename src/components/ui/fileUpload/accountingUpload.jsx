@@ -94,7 +94,8 @@ export const AccountingFileUpload = ({
     const documentType = {
       bills: selectedDocType === 'bills',
       investment: selectedDocType === 'investment',
-      spending: selectedDocType === 'spending'
+      spending: selectedDocType === 'spending',
+      salary: selectedDocType === 'salary'
     };
 
     const formData = new FormData();
@@ -105,7 +106,12 @@ export const AccountingFileUpload = ({
     setIsUploading(true);
 
     try {
-      const response = await axios.post(apiEndpoint, formData, {
+      // Choose the appropriate API endpoint based on document type
+      const endpoint = selectedDocType === 'salary' 
+        ? '/api/salaryOCR' 
+        : apiEndpoint;
+
+      const response = await axios.post(endpoint, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

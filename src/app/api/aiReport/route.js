@@ -6,7 +6,7 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
-    const response = await fetch("http://localhost:5000/generate-report", {
+    const response = await fetch("http://localhost:7000/generate-report", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
