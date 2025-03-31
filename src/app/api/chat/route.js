@@ -18,8 +18,17 @@ export async function POST(req) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
       });
-  
+      
+      if (!flaskRes.ok) {
+        const text = await flaskRes.text();
+        console.error("Flask returned non-JSON:", text);
+        return new Response(JSON.stringify({ error: "Flask error", details: text }), {
+          status: flaskRes.status,
+        });
+      }
+      
       const flaskData = await flaskRes.json();
+      
   
       return new Response(JSON.stringify(flaskData), {
         status: 200,
