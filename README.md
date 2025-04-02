@@ -50,6 +50,6 @@
 
 ## 📩 Contact  
 
-📧 For queries or collaborations, reach out at **your-email@example.com**  
+📧 For queries or collaborations, reach out at **2eze4abhishek@gmail.com**  
 
 💙 Star the repo if you find this useful! 🚀
